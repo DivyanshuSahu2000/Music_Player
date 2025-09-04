@@ -30,5 +30,5 @@ Deployed live on **Netlify** 🚀.
 ## 🛠️ Tech Stack
 
 - **Frontend:** React, Vite
-- **State Management:** Context API (or Redux if you used it)
+- **State Management:** Context API
 - **Deployment:** Netlify
