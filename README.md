@@ -1,4 +1,6 @@
-# 🎵 D Music Player
+# 🎵 D Music Player 
+(Integrated audius Api - "https://api.audius.co/v1/tracks/trending?limit=60&offset=4&app_name=D-Music-Player"
+    )
 
 A simple and modern **Music Player** built with **React + Vite**, featuring play/pause, next/previous, and seek functionality.  
 Deployed live on **Netlify** 🚀.
