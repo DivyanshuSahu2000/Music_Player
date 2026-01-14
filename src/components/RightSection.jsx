@@ -6,9 +6,9 @@ import { Link } from "react-router";
 import Card from "./Card";
 import { AppContext } from "../context/songContext";
 import SongBar from "./SongBar";
-
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 const RightSection = () => {
-  const { DATA } = useContext(AppContext);
+  const { DATA, currentSong } = useContext(AppContext);
 
   return (
     <div className="right-section">
@@ -41,9 +41,33 @@ const RightSection = () => {
       </div>
 
       <div className="card-container">
-        {DATA.map((item) => (
-          <Card key={item.id} item={item} />
-        ))}
+        {!currentSong ? (
+          <h2
+            style={{
+              color: "rgb(64, 224, 126)",
+              // padding: "5em",
+              paddingTop: "120px",
+              paddingBottom: "120px",
+              // translate: "-1/2",
+              gap: "2px",
+              fontWeight: 500,
+            }}
+          >
+            <span>
+              <AiOutlineLoading3Quarters
+                size={20}
+                style={{
+                  animation: "spin 0.8s infinite linear ",
+                  marginRight: "5px",
+                  fontWeight: "bolder",
+                }}
+              />
+            </span>
+            Loading...
+          </h2>
+        ) : (
+          DATA.map((item) => <Card key={item.id} item={item} />)
+        )}
       </div>
 
       <div

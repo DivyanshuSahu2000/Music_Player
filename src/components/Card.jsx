@@ -22,10 +22,23 @@ const Card = ({ item }) => {
   };
 
   const [heart, setHeart] = useState(false);
-
+  const getRandomFallback = () => {
+    const images = [1, 2, 3, 4, 5];
+    const randomIndex = Math.floor(Math.random() * images.length);
+    return `/images/${images[randomIndex]}.jpeg`;
+  };
   return (
     <div className="card">
-      <img className="card-img-top" src={item.image} alt={item.song} />
+      <img
+        className="card-img-top"
+        src={item.image}
+        alt={item.song}
+        loading="lazy"
+        onError={(e) => {
+          e.target.onerror = null;
+          e.target.src = getRandomFallback();
+        }}
+      />
       {heart ? (
         <FaHeart className="heart2" onClick={() => setHeart(false)} />
       ) : (

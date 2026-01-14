@@ -1,3 +1,19 @@
+@keyframes spin {
+  from {
+    transform: rotate(360deg);
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+.f-btn {
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.f-btn:active {
+  transform: scale(0.9);
+}
 .passion-one-regular {
   font-family: "Passion One", sans-serif;
   font-weight: 400;
@@ -46,7 +62,7 @@
   margin: 1vh;
 }
 .Container {
-  height: 100vh;
+  height: 101vh;
   display: flex;
   color: #ffff;
   background-color: black;
@@ -121,12 +137,12 @@
   justify-content: center;
   margin: 0.3em 0.3em 0.6em 0.6em;
   background-color: rgb(31, 28, 28);
-  padding: 20px;
+  padding: 12px;
   display: flex;
   flex-wrap: wrap;
   border-radius: 7px;
   height: auto;
-  gap: 1em;
+  gap: 0.5em;
 }
 .right-section {
   font-family: system-ui;
@@ -494,5 +510,16 @@
     top: 10%;
     height: 14%;
     position: relative;
+  }
+}
+@media (min-width: 500px) and (max-width: 649px) {
+  .song-name {
+    width: 30%;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 949px) {
+  .song-name {
+    width: 35%;
   }
 }
