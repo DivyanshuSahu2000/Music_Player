@@ -43,15 +43,13 @@ const RightSection = () => {
       <div className="card-container">
         {!currentSong ? (
           <h2
+            className="loader"
             style={{
-              color: "rgb(64, 224, 126)",
-              paddingTop: "120px",
-              paddingBottom: "120px",
-              gap: "2px",
-              fontWeight: 500,
+              fontFamily: "-moz-initial",
+              fontSize: "1em",
             }}
           >
-            <span>
+            {/* <span>
               <AiOutlineLoading3Quarters
                 size={20}
                 style={{
@@ -60,8 +58,8 @@ const RightSection = () => {
                   fontWeight: "bolder",
                 }}
               />
-            </span>
-            Loading...
+            </span> */}
+            Loading
           </h2>
         ) : (
           DATA.map((item) => <Card key={item.id} item={item} />)
