@@ -45,10 +45,8 @@ const RightSection = () => {
           <h2
             style={{
               color: "rgb(64, 224, 126)",
-              // padding: "5em",
               paddingTop: "120px",
               paddingBottom: "120px",
-              // translate: "-1/2",
               gap: "2px",
               fontWeight: 500,
             }}
@@ -70,10 +68,7 @@ const RightSection = () => {
         )}
       </div>
 
-      <div
-        className="div-songbar"
-        // style={{ height: "14%", position: "relative", top: "3%" }}
-      >
+      <div className="div-songbar">
         <SongBar />
       </div>
     </div>

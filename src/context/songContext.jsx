@@ -224,12 +224,11 @@ const AppProvider = ({ children }) => {
   const getData = async () => {
     try {
       const res = await fetch(
-        "https://api.audius.co/v1/tracks/trending?limit=60&offset=4&app_name=D-Music-Player"
+        "https://api.audius.co/v1/tracks/trending?offset=4&app_name=D-Music-Player"
       );
 
       const json = await res.json();
 
-      // ✅ FILTER OUT SONGS WITHOUT IMAGES
       const filtered = json.data
         .filter((track) => track.artwork?.["480x480"])
         .map((track) => ({
@@ -244,11 +243,9 @@ const AppProvider = ({ children }) => {
           track: `https://discoveryprovider.audius.co/v1/tracks/${track.id}/stream`,
         }));
 
-      // ✅ FAST FIRST LOAD (4 SONGS)
       setDATA(filtered.slice(0, 8));
       setCurrentSong(filtered[0]);
 
-      // ✅ LAZY LOAD REST
       setTimeout(() => {
         setDATA(filtered);
       }, 2500);
@@ -257,13 +254,10 @@ const AppProvider = ({ children }) => {
     }
   };
 
-  ////
-
   useEffect(() => {
     getData();
   }, []);
 
-  // const [currentSong, setCurrentSong] = useState(DATA[0]);
   return (
     <>
       <AppContext.Provider
