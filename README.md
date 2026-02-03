@@ -33,7 +33,11 @@ Deployed live on **Netlify** 🚀.
 ## 🛠️ Tech Stack
 
 React
+
 JavaScript (ES6+)
+
 Context API (state management)
+
 CSS
+
 Audius API
