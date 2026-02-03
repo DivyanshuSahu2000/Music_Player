@@ -21,23 +21,29 @@ Deployed live on **Netlify** 🚀.
 ---
 
 ## ⚡ Features
-
-🎶 Fetches songs using the Audius public API
-▶️ Play / Pause functionality
-⏭️ Next & Previous track controls
-⏱️ Seek bar for track progress
-📱 Fully responsive UI (mobile & desktop)
-🎨 Clean and minimal user interface
+-🎶 Fetches songs using the Audius public API
+-▶️ Play / Pause functionality
+-⏭️ Next & Previous track controls
+-⏱️ Seek bar for track progress
+-📱 Fully responsive UI (mobile & desktop)
+-🎨 Clean and minimal user interface
 ---
 
 ## 🛠️ Tech Stack
+-React
+-JavaScript (ES6+)
+-Context API (state management)
+-CSS
+-Audius API
+---
 
-React
+📚 What I Learned
 
-JavaScript (ES6+)
+-Working with real-world APIs
+-Managing global state using Context API
+-Building reusable React components
+-Handling media playback logic in the browser
+-Creating responsive layouts
+---
 
-Context API (state management)
-
-CSS
-
-Audius API
+⭐ If you like this project, consider giving it a star on GitHub!
