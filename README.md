@@ -22,16 +22,18 @@ Deployed live on **Netlify** 🚀.
 
 ## ⚡ Features
 
-- 🎶 Play / Pause music
-- ⏭️ Next / Previous song
-- 📊 Seekbar with progress tracking
-- 📱 Responsive design for mobile and desktop
-- 🎨 Built with **React + Vite** and styled with **CSS**
-
+🎶 Fetches songs using the Audius public API
+▶️ Play / Pause functionality
+⏭️ Next & Previous track controls
+⏱️ Seek bar for track progress
+📱 Fully responsive UI (mobile & desktop)
+🎨 Clean and minimal user interface
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React, Vite
-- **State Management:** Context API
-- **Deployment:** Netlify
+React
+JavaScript (ES6+)
+Context API (state management)
+CSS
+Audius API
